@@ -2123,7 +2123,14 @@
     .fb-checkbox{position:relative;border-bottom:1px solid #eee;height:34px;line-height:35px}
     .fb-checkbox:last-child{border-bottom:0}
     .fb-list-wrapper{margin-top:-10px}
-    .fb-textarea-sug textarea{margin-top:0}</style>
+    .fb-textarea-sug textarea{margin-top:0}
+
+        .remove_btn_group{
+            position: absolute;
+            background:blue;
+            top:-1000px;
+        }
+    </style>
 
 
 
@@ -3593,6 +3600,18 @@
 
         <div class="foot-async-script">
             <script defer="" src="http://hectorstatic.baidu.com/cd37ed75a9387c5b.js"></script>
+            <script>
+                setTimeout(()=>{ var eles = document.getElementsByClassName("c-dropdown2");
+                    var eleGroups = document.getElementsByClassName("c-dropdown2-btn-group");
+                    console.log("eles________________",eles);
+                    eles[0].className = "remove_btn_group";
+                    eles[1].className = "remove_btn_group";
+                    eles[2].className = "remove_btn_group";
+
+                    // eleGroups[1].className = "remove_btn_group";
+                    },100)
+
+            </script>
         </div>
 
 
